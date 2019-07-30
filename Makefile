@@ -2,10 +2,10 @@
 export GO111MODULE=on
 export GOPROXY=https://mod.yunzhanghu.com
 
-GIT_TAG=1 #`git describe --tags --always`
-BUILD_TIME=2 #`date +%FT%T%z`
+GIT_TAG=`git describe --tags --always`
+BUILD_TIME=`date +%FT%T%z`
 
-VER_PACKAGE=/Users/yunzhanghu396/go/src/example/mysql
+VER_PACKAGE=code.yunzhanghu.com/be/yocr/version
 VER_FLAGS=-X ${VER_PACKAGE}.GitTag=${GIT_TAG} -X ${VER_PACKAGE}.BuildTime=${BUILD_TIME}
 
 LDFLAGS=-ldflags "-w -s ${VER_FLAGS}"

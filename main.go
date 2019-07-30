@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"flag"
 	"fmt"
 	"time"
 
@@ -35,6 +36,8 @@ func TimeStrParseLocalWithFormat(tStr string, format string) (t time.Time, err e
 }
 
 func main() {
+	fmt.Println("00000")
+	flag.Parse()
 	fmt.Println(version.String())
 	_db, err := sqlx.Connect("mysql", "root:@tcp(127.0.0.1:3306)/broker?timeout=200ms&parseTime=true&loc=Local")
 	if err != nil {
