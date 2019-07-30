@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	"example/mysql/version"
+	"example/version/version"
 )
 
 var ver = flag.Bool("version", false, "version")

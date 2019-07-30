@@ -1,3 +1,3 @@
-module example/mysql
+module example/version
 
 go 1.12
